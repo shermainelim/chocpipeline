@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  data-testid="welcome-container"
+>
+  <div
+    data-testid="text"
+  >
+    Hi
+  </div>
+</div>
+`;

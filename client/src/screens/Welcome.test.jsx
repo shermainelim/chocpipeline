@@ -1,19 +1,9 @@
-import { render } from "@testing-library/react";
+import * as React from "react";
 import Welcome from "./Welcome";
-import { BrowserRouter as Router } from "react-router-dom";
 import "@testing-library/jest-dom/extend-expect";
+import renderer from "react-test-renderer";
 
-describe("Render whole Welcome page", () => {
-  const { getByTestId, getAllByTestId } = render(
-    <Router>
-      <Welcome />
-    </Router>
-  );
-  test("Renders resident part", () => {
-    expect(getByTestId("welcome-container")).toBeTruthy();
-    expect(getByTestId("text")).toHaveTextContent("hi");
-    expect(getByTestId("welcome-category-resident")).toBeTruthy();
-    expect(getByTestId("img-logo-resident")).toBeTruthy();
-    expect(getAllByTestId("custom-btn-resident")).toBeTruthy();
-  });
+it("renders correctly", () => {
+  const tree = renderer.create(<Welcome />).toJSON();
+  expect(tree).toMatchSnapshot();
 });
