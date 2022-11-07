@@ -1,1 +1,3 @@
-# react_nodejs_choc
+# Integrating React application with Gitlab CI CD Pipeline 
+
+https://gitlab.com/shermainelim/chocpipeline
